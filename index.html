@@ -288,6 +288,14 @@
         display: flex;
         flex-direction: row;
         gap: 30px;
+
+        @media (max-width: 768px) {
+          gap: 20px;
+        }
+
+        @media (max-width: 480px) {
+          gap: 10px;
+        }
       }
       .countdown__data {
         display: flex;
@@ -295,6 +303,16 @@
         width: 100%;
         gap: 1rem;
         margin-bottom: 2rem;
+
+        @media (max-width: 768px) {
+          gap: 0.5rem;
+          margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+          gap: 0.25rem;
+          margin-bottom: 1rem;
+        }
       }
       .countdown__input {
         padding-top: 1rem;
@@ -347,6 +365,17 @@
         font-size: 32px;
         font-family: "Digital Numbers";
         color: #484848;
+
+        @media (max-width: 768px) {
+          gap: 0.5rem;
+          margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 22px;
+          width: 60px;
+          height: 60px;
+        }
       }
       .countdown__info {
         font-size: 24px;
