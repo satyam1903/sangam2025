@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>WIN Sangam 2025</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.707040cd.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+
+    <!-- Animate .css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+      .carousel {
+        position: relative;
+        display: block;
+        width: 100%;
+        /* box-sizing: border-box; */
+      }
+      .carousel__prev,
+      .carousel__next {
+        position: absolute;
+        bottom: -15%;
+        transition: transform 0.25s ease;
+      }
+      .carousel__prev i,
+      .carousel__next i {
+        font-size: 60px;
+        color: var(--box-border);
+        cursor: pointer;
+      }
+      .carousel__prev:hover,
+      .carousel__next:hover {
+        transform: scale(1.25);
+      }
+      .carousel__prev {
+        left: 40%;
+      }
+      .carousel__next {
+        right: 40%;
+      }
+      .carousel__body {
+        width: 100%;
+        padding: 20px 0 50px 0;
+        overflow: hidden;
+      }
+      .carousel__body .carousel__slider {
+        position: relative;
+        transition: transform 1s ease-in-out;
+        background: var(--crsl-bg);
+      }
+      .carousel__body .carousel__slider__item {
+        position: relative;
+        display: block;
+        float: left;
+        /* box-sizing: border-box; */
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .carousel__body .carousel__slider__item .item__3d-frame {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 1s ease-in-out;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+      .carousel__body .carousel__slider__item .item__3d-frame:after {
+        content: "";
+        position: absolute;
+        bottom: -15%;
+        width: 100%;
+        height: 40px;
+        background: var(--box-shadow);
+        box-shadow: 0px 0px 5px 5px var(--box-shadow);
+        transform: rotateX(90deg) translate3d(0px, -20px, 0px);
+        opacity: 0.85;
+      }
+      .carousel__body .carousel__slider__item .item__3d-frame__box {
+        display: flex;
+        align-items: center;
+        vertical-align: middle;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        /* box-sizing: border-box; */
+        border-color: var(--box-border);
+        background: var(--box-bg);
+        border-width: 3px;
+      }
+      .carousel__body .carousel__slider__item .item__3d-frame__box h1 {
+        font-size: 7em;
+        width: 100%;
+        color: var(--box-border);
+      }
+      .carousel__body .carousel__slider__item .item__3d-frame__box--right,
+      .carousel__body .carousel__slider__item .item__3d-frame__box--left {
+        top: 0;
+        width: 40px;
+        backface-visibility: hidden;
+      }
+      .carousel__body .carousel__slider__item .item__3d-frame__box--left {
+        left: 0;
+        /* border-left-width: 5px; */
+        transform: translate3d(1px, 0, -40px) rotateY(-90deg);
+        transform-origin: 0%;
+      }
+      .carousel__body .carousel__slider__item .item__3d-frame__box--right {
+        right: 0;
+        /* border-right-width: 5px; */
+        transform: translate3d(-1px, 0, -40px) rotateY(90deg);
+        transform-origin: 100%;
+      }
+
+      .timeline-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .timeline-item {
+        position: relative;
+        width: 50%;
+        padding: 20px 40px;
+        box-sizing: border-box;
+      }
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #ffcc00;
+        left: calc(50% - 1px);
+      }
+
+      .timeline-content {
+        position: relative;
+        background: #1c1c1c;
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+
+      .timeline-content:hover {
+        background: #2a2a2a;
+        transform: translateY(-3px);
+      }
+      .timeline-content.left {
+        left: -50%;
+        text-align: right;
+        transform-origin: right center;
+      }
+
+      .timeline-content.right {
+        left: 50%;
+        text-align: left;
+        transform-origin: left center;
+      }
+      .time {
+        font-weight: bold;
+        color: #ffffff;
+      }
+      /* 
+      .timeline-item {
+        background: linear-gradient(135deg, #1f1c2c, #928dab);
+        color: white;
+        padding: 15px 25px;
+        margin: 10px;
+        border-radius: 12px;  
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, background 0.3s ease;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+      } */
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #f82249;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .timeline-content {
+        position: relative;
+        background: linear-gradient(135deg, #1f1c2c, #928dab);
+        padding: 15px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+
+      .timeline-content:hover {
+        background: #2a2a2a;
+        transform: translateY(-3px);
+      }
+
+      .activity {
+        font-style: italic;
+        color: #ffffff;
+      }
+
+      @media screen and (max-width: 768px) {
+        .timeline-item {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 40px;
+        }
+
+        .timeline-content.left,
+        .timeline-content.right {
+          left: 0;
+          text-align: left;
+        }
+
+        .timeline-item::after {
+          left: 0;
+        }
+      }
+    </style>
+
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/digital-numbers");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+      #container {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .countdown__container {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+      }
+      .countdown__data {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      .countdown__input {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 24px;
+        padding-right: 20px;
+        font-size: 1rem;
+        line-height: 1;
+        color: black;
+        background-color: white;
+        box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.15);
+        border: 1px black solid;
+        border-radius: 10px;
+        font-family: Poppins;
+      }
+      .countdown__button {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 24px;
+        padding-right: 20px;
+        font-size: 1rem;
+        line-height: 1;
+        color: #ffffff;
+        background-color: #000000;
+        box-shadow: 0 20px 35px 0 rgba(0, 0, 0, 0.15);
+        border: none;
+        border-radius: 10px;
+        font-family: Poppins;
+        transition-property: color, background-color;
+        transition-duration: 300ms;
+      }
+      .countdown__button:hover {
+        background-color: #ffffff;
+        color: #000000;
+      }
+      .countdown__item {
+        display: flex;
+        flex-direction: column;
+      }
+      .countdown__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 76px;
+        height: 76px;
+        margin-bottom: 16px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 4px 14px 1px rgba(0, 0, 0, 0.16);
+        font-size: 32px;
+        font-family: "Digital Numbers";
+        color: #484848;
+      }
+      .countdown__info {
+        font-size: 24px;
+        color: #ffffff;
+        text-align: center;
+      }
+    </style>
+
+    <style>
+      #visual-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Ensures this div is behind other content */
+        pointer-events: none; /* Ensures interactions pass through to other content */
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/cjs/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/cjs/react.production.min.js"></script>
+    <!-- <link href="/main.js" /> -->
+
+    <!-- =======================================================
+  * Template Name: TheEvent
+  * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img src="assets/img/wh-logo (2).png" alt="" />
+          <!-- Uncomment the line below if you also wish to use an text logo -->
+          <!-- <h1 class="sitename">TheEvent</h1>  -->
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li>
+              <a href="#hero" class="active">Home<br /></a>
+            </li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#venue">Venue</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div id="visual-container"></div>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main class="main">
+          <!-- Hero Section -->
+          <section id="hero" class="hero section dark-background">
+            <img
+              src="assets/img/group-photo-2023.JPG"
+              alt=""
+              data-aos="fade-in"
+              class=""
+            />
+
+            <div
+              class="container d-flex flex-column align-items-center text-center mt-auto"
+            >
+              <h2
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-ani="flip"
+                class="animate__animated animate__pulse"
+              >
+                Sangam 2025<br /><span
+                  >WINDMOLLER & HOLSCHER
+                  <br />
+                </span>
+                11<sup>th</sup> ANNUAL WIN CONCLAVE
+              </h2>
+              <div data-aos="fade-up" data-aos-delay="300" class="">
+                <a
+                  href="/W&H Annual Event.mp4"
+                  class="glightbox pulsating-play-btn mt-3"
+                ></a>
+              </div>
+              <div class="countdown" style="margin-top: 5%">
+                <div class="countdown__container">
+                  <div class="countdown__item days">
+                    <div class="countdown__number">
+                      <div id="days">00</div>
+                    </div>
+                    <div class="countdown__info">Days</div>
+                  </div>
+                  <div class="countdown__item hours">
+                    <div class="countdown__number">
+                      <div id="hours">00</div>
+                    </div>
+                    <div class="countdown__info">Hr</div>
+                  </div>
+                  <div class="countdown__item minutes">
+                    <div class="countdown__number">
+                      <div id="minutes">00</div>
+                    </div>
+                    <div class="countdown__info">Mins</div>
+                  </div>
+                  <div class="countdown__item seconds">
+                    <div class="countdown__number">
+                      <div id="seconds">00</div>
+                    </div>
+                    <div class="countdown__info">Sec</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-info mt-auto position-relative">
+              <div class="container position-relative" data-aos="fade-up">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h2>About The Event</h2>
+                    <p>
+                      Sangam is an Annual function of W&H India. it's a
+                      testament to our unity, resilience, and shared
+                      aspirations. Get ready for Sangam 2025 – where hearts
+                      unite, and excellence ignites!
+                    </p>
+                  </div>
+                  <div class="col-lg-3">
+                    <h3>Where</h3>
+                    <p>New Delhi</p>
+                  </div>
+                  <div class="col-lg-3">
+                    <h3>When</h3>
+                    <p>Saturday To Monday<br />10-12 January</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <style>
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              color: #ffffff;
+              font-family: sans-serif;
+            }
+            * {
+              box-sizing: border-box;
+            }
+
+            .timeline-line {
+              max-width: 1200px;
+              position: relative;
+              margin: 0 auto;
+            }
+
+            .timeline-line::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 50%;
+              width: 6px;
+              margin-left: -3px;
+              background: rgb(73 84 89);
+              /* background: radial-gradient(
+            circle,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(69, 115, 144, 1) 73%,
+            rgba(0, 212, 255, 1) 100%
+          ); */
+            }
+
+            .box-container {
+              width: 50%;
+              padding: 10px 40px;
+              position: relative;
+              background-color: inherit;
+            }
+
+            .box-container::after {
+              content: "";
+              position: absolute;
+              top: 15px;
+              right: -12px;
+              width: 25px;
+              height: 25px;
+              z-index: 1;
+              border-radius: 50%;
+              background: linear-gradient(135deg, #636fa4, #e8cbc0);
+
+              border: 1px solid #212120;
+            }
+
+            .left {
+              left: 0;
+            }
+
+            .right {
+              left: 50%;
+            }
+
+            .left::before {
+              content: " ";
+              position: absolute;
+              top: 22px;
+              right: 30px;
+              width: 0;
+              height: 0;
+              z-index: 1;
+              border: medium solid #fff;
+              border-width: 10px 0 10px 10px;
+              border-color: transparent transparent transparent #e8cbc0;
+            }
+
+            .right::before {
+              content: " ";
+              position: absolute;
+              top: 22px;
+              left: 30px;
+              width: 0;
+              height: 0;
+              z-index: 1;
+              border: medium solid #fff;
+              border-width: 10px 10px 10px 0;
+              border-color: transparent #636fa4 transparent transparent;
+            }
+
+            .right::after {
+              left: -12px;
+            }
+
+            .content {
+              padding: 20px 30px;
+              position: relative;
+              border-radius: 6px;
+              /* background-color: #181515; */
+              background: linear-gradient(135deg, #636fa4, #e8cbc0);
+
+              /* background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); */
+            }
+
+            @media screen and (max-width: 600px) {
+              .timeline-line::after {
+                left: 31px;
+              }
+
+              .box-container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+              }
+
+              .box-container::before {
+                left: 60px;
+                border: medium solid #fff;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #636fa4 transparent transparent;
+              }
+
+              .left::after,
+              .right::after {
+                left: 14px;
+              }
+
+              .right {
+                left: 0%;
+              }
+            }
+          </style>
+          <!-- Schedule Section -->
+
+          <section id="schedule" class="schedule section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Event Schedule<br /></h2>
+              <!-- <p>
+            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+            consectetur velit
+          </p> -->
+            </div>
+            <!-- End Section Title -->
+
+            <div class="container">
+              <ul
+                class="nav nav-tabs"
+                role="tablist"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    href="#day-1"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    >Day 1</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="#day-2"
+                    role="tab"
+                    data-bs-toggle="tab"
+                    >Day 2</a
+                  >
+                </li>
+                <!-- <li class="nav-item">
+              <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab"
+                >Day 3</a
+              >
+            </li> -->
+              </ul>
+
+              <div
+                class="tab-content row justify-content-center"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <!-- <h3 class="sub-heading">
+              Voluptatem nulla veniam soluta et corrupti consequatur neque
+              eveniet officia. Eius necessitatibus voluptatem quis labore
+              perspiciatis quia.
+            </h3> -->
+
+                <!-- Schdule Day 1 -->
+                <div
+                  role="tabpanel"
+                  class="col-lg-9 tab-pane fade show active"
+                  id="day-1"
+                >
+                  <div class="timeline-line">
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>08:30 - 10:45</h2>
+                        <p><i class="fas fa-bus"></i> Departure from Office</p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>10:45 - 11:00</h2>
+                        <p><i class="fas fa-building"></i> Arrival</p>
+                      </div>
+                    </div>
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>11:00 - 11:30</h2>
+                        <p>
+                          <i class="fas fa-coffee"></i> Tea Break (In front of
+                          Darbar)
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>11:30 - 12:15</h2>
+                        <p>
+                          <i class="fas fa-microphone"></i> Opening Note by MD
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>12:15 - 12:45</h2>
+                        <p>
+                          <i class="fas fa-chart-line"></i> Sales Presentation -
+                          HMA
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>12:45 - 13:15</h2>
+                        <p>
+                          <i class="fas fa-cogs"></i> Service Presentation - HMA
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>13:15 - 14:00</h2>
+                        <p><i class="fas fa-utensils"></i> Lunch</p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>14:00 - 14:30</h2>
+                        <p>
+                          <i class="fas fa-clipboard-list"></i> Operations
+                          Presentation - HMA
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>14:30 - 14:45</h2>
+                        <p><i class="fas fa-camera"></i> Group Photograph</p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>14:45 - 15:00</h2>
+                        <p>
+                          <i class="fas fa-coffee"></i> Tea Break (Activity
+                          Area)
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>15:00 - 18:30</h2>
+                        <p>
+                          <i class="fas fa-futbol"></i> Cricket & Paintball
+                          Championship/Mini Golf/Indoor Games/Cycling
+                        </p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>18:30 - 19:00</h2>
+                        <p><i class="fas fa-clock"></i> Leisure Time</p>
+                      </div>
+                    </div>
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>19:00 - 19:45</h2>
+                        <p><i class="fas fa-laugh"></i> Stand-up Comedy</p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>19:45 - 20:00</h2>
+                        <p><i class="fas fa-trophy"></i> Awards Ceremony</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Add Font Awesome for icons -->
+                  <script
+                    src="https://kit.fontawesome.com/a076d05399.js"
+                    crossorigin="anonymous"
+                  ></script>
+                </div>
+                <!-- End Schdule Day 1 -->
+
+                <!-- Schdule Day 2 -->
+                <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-2">
+                  <div class="timeline-line">
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>08:30 - 10:45</h2>
+                        <p>Departure from Office</p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>10:45 - 11:00</h2>
+                        <p>Arrival</p>
+                      </div>
+                    </div>
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>11:00 - 11:30</h2>
+                        <p>Tea Break (In front of Darbar)</p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>11:30 - 12:15</h2>
+                        <p>Opening Note by MD</p>
+                      </div>
+                    </div>
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>12:15 - 12:45</h2>
+                        <p>Sales Presentation - HMA</p>
+                      </div>
+                    </div>
+                    <div class="box-container right">
+                      <div class="content">
+                        <h2>12:45 - 13:15</h2>
+                        <p>Service Presentation - HMA</p>
+                      </div>
+                    </div>
+                    <div class="box-container left">
+                      <div class="content">
+                        <h2>13:15 - 14:00</h2>
+                        <p>Lunch</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- End Schdule Day 2 -->
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- /Schedule Section -->
+
+          <!-- Venue Section -->
+
+          <section id="venue" class="venue section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Event Venue<br /></h2>
+            </div>
+
+            <div class="container-fluid" data-aos="fade-up">
+              <div class="row g-0">
+                <div class="col-lg-6 venue-map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.7352167995145!2d76.93761507648269!3d28.366853796094155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d182cf5b4446b%3A0xc8cc75f49a165562!2sHeritage%20Village%20Resort%20%26%20Spa%2C%20Manesar!5e0!3m2!1sen!2sin!4v1704912290476!5m2!1sen!2sin"
+                    frameborder="0"
+                    style="border: 0"
+                    allowfullscreen=""
+                  ></iframe>
+                </div>
+
+                <div class="col-lg-6 venue-info">
+                  <div class="row justify-content-center">
+                    <div class="col-11 col-lg-8 position-relative">
+                      <!-- <h3>Downtown Conference Center, New York</h3>
+                  <p>
+                    Iste nobis eum sapiente sunt enim dolores labore accusantium
+                    autem. Cumque beatae ipsam. Est quae sit qui voluptatem
+                    corporis velit. Qui maxime accusamus possimus. Consequatur
+                    sequi et ea suscipit enim nesciunt quia velit.
+                  </p>-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="container-fluid venue-gallery-container"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="row g-0">
+                <div class="col-lg-3 col-md-4">
+                  <div class="venue-gallery">
+                    <a
+                      href="assets/img/venue-gallery/venue-gallery-1.jpg"
+                      class="glightbox"
+                      data-gall="venue-gallery"
+                    >
+                      <img
+                        src="assets/img/venue-gallery/venue-gallery-1.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                  <div class="venue-gallery">
+                    <a
+                      href="assets/img/venue-gallery/venue-gallery-2.jpg"
+                      class="glightbox"
+                      data-gall="venue-gallery"
+                    >
+                      <img
+                        src="assets/img/venue-gallery/venue-gallery-2.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                  <div class="venue-gallery">
+                    <a
+                      href="assets/img/venue-gallery/venue-gallery-3.jpg"
+                      class="glightbox"
+                      data-gall="venue-gallery"
+                    >
+                      <img
+                        src="assets/img/venue-gallery/venue-gallery-3.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                  <div class="venue-gallery">
+                    <a
+                      href="assets/img/venue-gallery/venue-gallery-4.jpg"
+                      class="glightbox"
+                      data-gall="venue-gallery"
+                    >
+                      <img
+                        src="assets/img/venue-gallery/venue-gallery-4.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                  <div class="venue-gallery">
+                    <a
+                      href="assets/img/venue-gallery/venue-gallery-5.jpg"
+                      class="glightbox"
+                      data-gall="venue-gallery"
+                    >
+                      <img
+                        src="assets/img/venue-gallery/venue-gallery-5.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                  <div class="venue-gallery">
+                    <a
+                      href="assets/img/venue-gallery/venue-gallery-6.jpg"
+                      class="glightbox"
+                      data-gall="venue-gallery"
+                    >
+                      <img
+                        src="assets/img/venue-gallery/venue-gallery-6.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                  <div class="venue-gallery">
+                    <a
+                      href="assets/img/venue-gallery/venue-gallery-7.jpg"
+                      class="glightbox"
+                      data-gall="venue-gallery"
+                    >
+                      <img
+                        src="assets/img/venue-gallery/venue-gallery-7.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4">
+                  <div class="venue-gallery">
+                    <a
+                      href="assets/img/venue-gallery/venue-gallery-8.jpg"
+                      class="glightbox"
+                      data-gall="venue-gallery"
+                    >
+                      <img
+                        src="assets/img/venue-gallery/venue-gallery-8.jpg"
+                        alt=""
+                        class="img-fluid"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- /Venue Section -->
+
+          <!-- Gallery Section -->
+          <section id="gallery" class="gallery section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Gallery</h2>
+            </div>
+            <!-- End Section Title -->
+
+            <div class="carousel">
+              <div class="carousel__body">
+                <div class="carousel__prev">
+                  <i class="far fa-angle-left"></i>
+                </div>
+                <div class="carousel__next">
+                  <i class="far fa-angle-right"></i>
+                </div>
+                <div class="carousel__slider">
+                  <div class="carousel__slider__item">
+                    <div class="item__3d-frame">
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--front"
+                      >
+                        <a
+                          class="glightbox"
+                          data-gallery="images-gallery"
+                          href="assets/img/wh-event/MAN_3713.JPG"
+                          ><img
+                            src="assets/img/wh-event/MAN_3713.JPG"
+                            class="img-fluid"
+                            alt=""
+                        /></a>
+                      </div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--left"
+                      ></div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--right"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="carousel__slider__item">
+                    <div class="item__3d-frame">
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--front"
+                      >
+                        <a
+                          class="glightbox"
+                          data-gallery="images-gallery"
+                          href="assets/img/wh-event/DSC_8932.JPG"
+                          ><img
+                            src="assets/img/wh-event/DSC_8932.JPG"
+                            class="img-fluid"
+                            alt=""
+                        /></a>
+                      </div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--left"
+                      ></div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--right"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="carousel__slider__item">
+                    <div class="item__3d-frame">
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--front"
+                      >
+                        <a
+                          class="glightbox"
+                          data-gallery="images-gallery"
+                          href="assets/img/wh-event/DSC_9910.JPG"
+                          ><img
+                            src="assets/img/wh-event/DSC_9910.JPG"
+                            class="img-fluid"
+                            alt=""
+                        /></a>
+                      </div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--left"
+                      ></div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--right"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="carousel__slider__item">
+                    <div class="item__3d-frame">
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--front"
+                      >
+                        <a
+                          class="glightbox"
+                          data-gallery="images-gallery"
+                          href="assets/img/wh-event/MAN_2955.JPG"
+                          ><img
+                            src="assets/img/wh-event/MAN_2955.JPG"
+                            class="img-fluid"
+                            alt=""
+                        /></a>
+                      </div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--left"
+                      ></div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--right"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="carousel__slider__item">
+                    <div class="item__3d-frame">
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--front"
+                      >
+                        <a
+                          class="glightbox"
+                          data-gallery="images-gallery"
+                          href="assets/img/wh-event/MAN_3150.JPG"
+                          ><img
+                            src="assets/img/wh-event/MAN_3150.JPG"
+                            class="img-fluid"
+                            alt=""
+                        /></a>
+                      </div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--left"
+                      ></div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--right"
+                      ></div>
+                    </div>
+                  </div>
+                  <!-- <div class="carousel__slider__item">
+                <div class="item__3d-frame">
+                  <div class="item__3d-frame__box item__3d-frame__box--front">
+                    <a
+                      class="glightbox"
+                      data-gallery="images-gallery"
+                      href="assets/img/wh-event/MAN_3150.JPG"
+                      ><img
+                        src="assets/img/wh-event/MAN_3150.JPG"
+                        class="img-fluid"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div
+                    class="item__3d-frame__box item__3d-frame__box--left"
+                  ></div>
+                  <div
+                    class="item__3d-frame__box item__3d-frame__box--right"
+                  ></div>
+                </div>
+              </div> -->
+                  <div class="carousel__slider__item">
+                    <div class="item__3d-frame">
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--front"
+                      >
+                        <a
+                          class="glightbox"
+                          data-gallery="images-gallery"
+                          href="assets/img/wh-event/MAN_3337.JPG"
+                          ><img
+                            src="assets/img/wh-event/MAN_3337.JPG"
+                            class="img-fluid"
+                            alt=""
+                        /></a>
+                      </div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--left"
+                      ></div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--right"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="carousel__slider__item">
+                    <div class="item__3d-frame">
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--front"
+                      >
+                        <a
+                          class="glightbox"
+                          data-gallery="images-gallery"
+                          href="assets/img/wh-event/MAN_3479.JPG"
+                          ><img
+                            src="assets/img/wh-event/MAN_3479.JPG"
+                            class="img-fluid"
+                            alt=""
+                        /></a>
+                      </div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--left"
+                      ></div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--right"
+                      ></div>
+                    </div>
+                  </div>
+                  <div class="carousel__slider__item">
+                    <div class="item__3d-frame">
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--front"
+                      >
+                        <a
+                          class="glightbox"
+                          data-gallery="images-gallery"
+                          href="assets/img/wh-event/MAN_3713.JPG"
+                          ><img
+                            src="assets/img/wh-event/MAN_3713.JPG"
+                            class="img-fluid"
+                            alt=""
+                        /></a>
+                      </div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--left"
+                      ></div>
+                      <div
+                        class="item__3d-frame__box item__3d-frame__box--right"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              (function () {
+                "use strict";
+
+                var carousel = document.getElementsByClassName("carousel")[0],
+                  slider =
+                    carousel.getElementsByClassName("carousel__slider")[0],
+                  items = carousel.getElementsByClassName(
+                    "carousel__slider__item"
+                  ),
+                  prevBtn =
+                    carousel.getElementsByClassName("carousel__prev")[0],
+                  nextBtn =
+                    carousel.getElementsByClassName("carousel__next")[0];
+
+                var width,
+                  height,
+                  totalWidth,
+                  margin = 20,
+                  currIndex = 0,
+                  interval,
+                  intervalTime = 4000;
+
+                function init() {
+                  resize();
+                  move(Math.floor(items.length / 2));
+                  bindEvents();
+
+                  timer();
+                }
+
+                function resize() {
+                  (width = Math.max(window.innerWidth * 0.5, 275)),
+                    (height = window.innerHeight * 0.5),
+                    (totalWidth = width * items.length);
+
+                  slider.style.width = totalWidth + "px";
+
+                  for (var i = 0; i < items.length; i++) {
+                    let item = items[i];
+                    item.style.width = width - margin * 2 + "px";
+                    item.style.height = height + "px";
+                  }
+                }
+
+                function move(index) {
+                  if (index < 1) index = items.length;
+                  if (index > items.length) index = 1;
+                  currIndex = index;
+
+                  for (var i = 0; i < items.length; i++) {
+                    let item = items[i],
+                      box = item.getElementsByClassName("item__3d-frame")[0];
+                    if (i == index - 1) {
+                      item.classList.add("carousel__slider__item--active");
+                      box.style.transform = "perspective(1200px)";
+                    } else {
+                      item.classList.remove("carousel__slider__item--active");
+                      box.style.transform =
+                        "perspective(1200px) rotateY(" +
+                        (i < index - 1 ? 40 : -40) +
+                        "deg)";
+                    }
+                  }
+
+                  slider.style.transform =
+                    "translate3d(" +
+                    (index * -width + width / 2 + window.innerWidth / 2) +
+                    "px, 0, 0)";
+                }
+
+                function timer() {
+                  clearInterval(interval);
+                  interval = setInterval(() => {
+                    move(++currIndex);
+                  }, intervalTime);
+                }
+
+                function prev() {
+                  move(--currIndex);
+                  timer();
+                }
+
+                function next() {
+                  move(++currIndex);
+                  timer();
+                }
+
+                function bindEvents() {
+                  window.onresize = resize;
+                  prevBtn.addEventListener("click", () => {
+                    prev();
+                  });
+                  nextBtn.addEventListener("click", () => {
+                    next();
+                  });
+                }
+
+                init();
+              })();
+            </script>
+          </section>
+          <!-- /Gallery Section -->
+
+          <!-- Speakers Section -->
+          <section id="speakers" class="speakers section">
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Team<br /></h2>
+            </div>
+            <!-- End Section Title -->
+
+            <div class="container">
+              <div class="row gy-4">
+                <div
+                  class="col-xl-4 col-lg-4 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div class="member">
+                    <img
+                      src="assets/img/abhinav.0bedf67e.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="member-info">
+                      <div class="member-info-content">
+                        <h4>
+                          <a href="speaker-details.html"> Abhinav Shandilya</a>
+                        </h4>
+                        <span>''</span>
+                      </div>
+                      <div class="social"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Team Member -->
+
+                <div
+                  class="col-xl-4 col-lg-4 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                >
+                  <div class="member">
+                    <img
+                      src="assets/img/bharat.a3e31760.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                    <div class="member-info">
+                      <div class="member-info-content">
+                        <h4><a href="speaker-details.html">Bharat Rana</a></h4>
+                        <span>''</span>
+                      </div>
+                      <div class="social">
+                        <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Team Member -->
+
+                <div
+                  class="col-xl-4 col-lg-4 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <div class="member">
+                    <img
+                      src="assets/img/mansi.faa4b3dc.png"
+                      alt=""
+                      height="265px"
+                    />
+                    <div class="member-info">
+                      <div class="member-info-content">
+                        <h4><a href="speaker-details.html">Mansi Gupta</a></h4>
+                        <span>''</span>
+                      </div>
+                      <div class="social">
+                        <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Team Member -->
+
+                <div
+                  class="col-xl-4 col-lg-4 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <div class="member">
+                    <img
+                      src="assets/img/rakshit.ad463413.png"
+                      alt=""
+                      height="265px"
+                      width="auto"
+                    />
+                    <div class="member-info">
+                      <div class="member-info-content">
+                        <h4>
+                          <a href="speaker-details.html">Rakshit Joshi</a>
+                        </h4>
+                        <span>''</span>
+                      </div>
+                      <div class="social">
+                        <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Team Member -->
+                <div
+                  class="col-xl-4 col-lg-4 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <div class="member">
+                    <img
+                      src="assets/img/utkarsh.b7c3ac2c.png"
+                      alt=""
+                      height="265px"
+                      width="auto"
+                    />
+                    <div class="member-info">
+                      <div class="member-info-content">
+                        <h4>
+                          <a href="speaker-details.html">Uttkarsh Singh</a>
+                        </h4>
+                        <span>''</span>
+                      </div>
+                      <div class="social">
+                        <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="col-xl-4 col-lg-4 col-md-6"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
+                  <div class="member">
+                    <img
+                      src="assets/img/rinku.88cce133.png"
+                      alt=""
+                      height="265px"
+                      width="auto"
+                    />
+                    <div class="member-info">
+                      <div class="member-info-content">
+                        <h4><a href="speaker-details.html">Rinku Sharma</a></h4>
+                        <span>''</span>
+                      </div>
+                      <div class="social">
+                        <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
+                    <a href=""><i class="bi bi-facebook"></i></a>
+                    <a href=""><i class="bi bi-instagram"></i></a>
+                    <a href=""><i class="bi bi-linkedin"></i></a> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- /Speakers Section -->
+        </main>
+        <section
+          style="display: flex; text-align: center; justify-content: center"
+        >
+          <div>
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Game<br /></h2>
+            </div>
+            <iframe
+              src="https://helixjump.h5games.usercontent.goog/v/520e4149-f591-4707-94f5-1da61c3fd5bc/"
+              style="
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 70vh;
+                border: none;
+              "
+            ></iframe>
+
+            <div>
+              <!-- <iframe
+            src="https://games.cdn.famobi.com/html5games/s/slice-rush/v040/?fg_domain=play.famobi.com&fg_aid=A1000-111&fg_uid=346e8aee-6848-4974-a0cd-d19525a18c41&fg_pid=e37ab3ce-88cd-4438-9b9c-a37df5d33736&fg_beat=335&original_ref=https%3A%2F%2Fplay.famobi.com%2Fslice-rush"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+          ></iframe> -->
+              <!-- <script src="https://play.famobi.com/slice-rush"></script> -->
+              <!-- <script src="https://cdn.htmlgames.com/embed.js?game=RememberTheBubbles&amp;bgcolor=white"></script> -->
+            </div>
+          </div>
+        </section>
+
+        <footer id="footer" class="footer dark-background">
+          <div class="copyright text-center">
+            <div
+              class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center"
+            >
+              <div
+                class="d-flex flex-column align-items-center align-items-lg-start"
+              >
+                <div>
+                  © Copyright <strong><span>Sangam 2025</span></strong
+                  >. All Rights Reserved
+                </div>
+                <div class="credits">
+                  <!-- All the links in the footer should remain intact. -->
+                  <!-- You can delete the links only if you purchased the pro version. -->
+                  <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                  <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+                  Designed by
+                  <a href="https://bootstrapmade.com/">W & H INDIA</a>
+                </div>
+              </div>
+
+              <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <!-- <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a> -->
+                <a href=""><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+
+    <script>
+      var exports = {};
+    </script>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://assets.codepen.io/16327/ScrollTrigger.min.js?v=3.12"></script>
+    <script src="https://assets.codepen.io/16327/ScrollSmoother.min.js?v=3.12"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+      let smoother = ScrollSmoother.create({
+        smooth: 2,
+        effects: true,
+      });
+    </script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- particle js file  -->
+    <script src="/particle.js"></script>
+    <script type="module" src="/assets/js/countdown.js"></script>
+  </body>
+</html>
