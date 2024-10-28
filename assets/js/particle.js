@@ -26,7 +26,7 @@ const textureLoader = new THREE.TextureLoader();
 // Carica le texture per i cubi
 const textures = [
   textureLoader.load(
-    "https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?cs=srgb&dl=pexels-enginakyurt-1435752.jpg&fm=jpg&w=1920&h=1281"
+    "https://www.superoffice.com/globalassets/blog/2018/8/sales-process-template.jpg?v=4998cd"
   ), // Sostituisci con il percorso della tua texture
 ];
 
