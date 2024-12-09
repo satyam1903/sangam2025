@@ -7,6 +7,21 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
+    const emailPattern = /^[a-zA-Z]+\.[a-zA-Z]+@wuh-group\.com$/;
+    if (!name) {
+      alert("Please enter your name.");
+      return;
+    }
+
+    if (!email) {
+      alert("Please enter your email.");
+      return;
+    }
+
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid office email");
+      return;
+    }
 
     if (name && email) {
       // You can send this data to your backend if required.

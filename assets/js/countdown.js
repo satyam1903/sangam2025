@@ -1,7 +1,7 @@
 let countdownTicRef = null;
 
 // Set the deadline date to 10 January 2025
-const deadlineDate = new Date("2025-01-10T00:00:00Z").toISOString();
+const deadlineDate = new Date("2025-01-10T11:00:00Z").toISOString();
 
 function getTimeRemaining(date) {
   const time = Date.parse(date) - new Date().getTime(),
