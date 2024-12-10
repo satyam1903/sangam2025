@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (!emailPattern.test(email)) {
-      alert("Please enter a valid office email");
+      alert("Please enter a valid office email Address");
       return;
     }
 
