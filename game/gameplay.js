@@ -35292,7 +35292,6 @@
                           case 0:
                             scoreUpdater(t);
                             return (
-                              console.log("Satyam", t),
                               (Mf.SCORE = t),
                               (e.next = 4),
                               Mf.H5SDK.getPlatform().getBestScore()
@@ -36947,7 +36946,6 @@
           (this._pauseCTA = document.querySelector(".js-pause")),
           (this._paramsCTA = document.querySelector(".js-params")),
           (this._scoreContainer = document.querySelector(".score-container")),
-          (this._bestScoreGame = document.querySelector(".best-score")),
           (this._bestScoreEndScreen =
             document.querySelector(".new-best-score")),
           Xp.ticker.fps(60),
@@ -38165,7 +38163,8 @@ function scoreUpdater(score) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      name: savedUserInfo.name,
+      name: extractNameFromEmail(savedUserInfo.email),
+      email: savedUserInfo.email,
       score: score,
     }),
   })
@@ -38181,4 +38180,13 @@ function scoreUpdater(score) {
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
     });
+}
+
+function extractNameFromEmail(email) {
+  const [firstName, lastName] = email.split("@")[0].split(".");
+  return `${capitalize(firstName)} ${capitalize(lastName)}`;
+}
+
+function capitalize(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
 }
