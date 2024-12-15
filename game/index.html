@@ -1106,7 +1106,7 @@
   <script src="./VOODOO-H5SDK.snacks.js"></script>
 
   <body>
-    <div class="main">
+    <div class="main" id="helix-game">
       <div class="background-gradient">
         <img
           class="background-image"
@@ -1116,7 +1116,7 @@
       </div>
       <canvas class="canvas"></canvas>
       <div class="loading-screen">
-        <span class="loading-text">Loading satyam...</span>
+        <span class="loading-text">Loading Game...</span>
       </div>
       <div class="game-ui">
         <div class="params">
@@ -1221,8 +1221,8 @@
         <div class="score-container">
           <span class="js-score-add score-add">+6</span>
           <span class="normal-score js-score">0</span>
-          <div class="best-score">
-            BEST : <span class="js-best-score">0</span>
+          <div class="best-score" style="display: none">
+            BEST : <span class="js-best-score"></span>
           </div>
           <div class="new-best-score">
             <span class="new-score-text js-new-best-text"

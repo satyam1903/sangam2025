@@ -37632,6 +37632,7 @@
           {
             key: "_endScreenHandler",
             value: function () {
+              window.history.go(0);
               var e = this;
               this.resetNormalGravity(),
                 (this.GAME.isLose = !1),
