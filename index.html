@@ -1490,9 +1490,9 @@
               }
 
               function resize() {
-                width = Math.max(window.innerWidth * 0.5, 275);
-                height = window.innerHeight/.88 * 0.5;
-                totalWidth = width * items.length;
+                (width = Math.max(window.innerWidth * 0.5, 275)),
+                  (height = window.innerHeight * 0.5),
+                  (totalWidth = width * items.length);
 
                 slider.style.width = totalWidth + "px";
 
@@ -1960,11 +1960,19 @@
               flex-direction: row;
             }
 
+            #helix-game {
+              margin-top: 10%;
+            }
+
             /* For small screen sizes */
             @media (max-width: 768px) {
               /* Adjust the breakpoint as needed */
               .game-section {
                 flex-direction: column;
+              }
+
+              #helix-game {
+                width: 100%;
               }
             }
           </style>
@@ -1973,8 +1981,9 @@
               id="helix-game"
               src="./game/index.html"
               frameborder="0"
-              height="700px"
-              width="400px"
+              width="450"
+              height="750"
+              allowfullscreen
             ></iframe>
             <!-- style for leader board design -->
             <div id="leaderboard-modal">
@@ -2224,20 +2233,6 @@
         position: relative;
       }
 
-      /* .form-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 10;
-      } */
-
-      /* Enhanced Form Overlay Styles */
       .form-card {
         background: #101215d9;
         padding: 30px;
@@ -2275,6 +2270,7 @@
         padding: 12px 20px; /* Larger button */
         font-size: 16px; /* Larger text on the button */
         font-weight: bold;
+        margin: 25px 0px;
         background: #007bff;
         color: #fff;
         border: none;
