@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   userInfoForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const email = document.getElementById("email").value.trim();
-    const emailPattern = /^[a-zA-Z]+\.[a-zA-Z]+@wuh-group\.com$/;
+    const emailPattern =
+      /^[a-zA-Z]+(?:-[a-zA-Z]+)*\.[a-zA-Z]+(?:-[a-zA-Z]+)*@wuh-group\.com$/;
 
     if (!email) {
       alert("Please enter your email.");

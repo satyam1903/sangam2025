@@ -63,7 +63,6 @@
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
 body {
-  color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
 }
@@ -624,26 +623,6 @@ h6 {
   font-size: 13px;
 }
 
-.footer .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  color: var(--contrast-color);
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 4px;
-  border-radius: 4px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-
-.footer .social-links a:hover {
-  background: var(--accent-color);
-  text-decoration: none;
-}
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -963,72 +942,89 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Speakers Section
---------------------------------------------------------------*/
-.speakers {
-  --default-color: #ffffff;
-}
-
-.speakers .member {
-  text-align: center;
+.md-note-section {
+  width: 100%;
   position: relative;
+  padding: 5%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column; /* Ensures the heading appears on top */
+  align-items: center;
+}
+
+.md-note-container {
+  display: flex;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  align-items: center;
+  background-color: #101215d9;
+}
+
+.md-image {
+  flex: 1;
+  max-width: 50%; /* Limits width to 50% */
+  clip-path: polygon(0 0, 90% 0, 80% 100%, 0% 100%);
   overflow: hidden;
-  margin: 0 20%;
+  position: relative;
 }
 
-.speakers .member .member-info {
-  position: absolute;
-  padding: 15px 0;
-  inset: auto 0 -44px 0;
-  background: rgba(0, 0, 0, 0.6);
-  transition: 0.4s;
+.md-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Maintains aspect ratio */
 }
 
-.speakers .member .member-info-content h4 {
-  color: var(--contrast-color);
-  font-weight: 700;
-  margin-bottom: 4px;
-  font-size: 16px;
+.md-note {
+  flex: 1;
+  max-width: 50%; /* Limits width to 50% */
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-left: 1rem; /* Adds spacing between image and note */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
 }
 
-.speakers .member .member-info-content h4 a {
-  color: var(--contrast-color);
+.md-note-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.speakers .member .member-info-content h4 a:hover {
-  color: var(--accent-color);
-}
-
-.speakers .member .member-info-content span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-}
-
-.speakers .member .social {
-  text-align: center;
-  padding-top: 10px;
-}
-
-.speakers .member .social a {
-  transition: color 0.3s;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin: 0 4px;
-  display: inline-block;
-}
-
-.speakers .member .social a:hover {
-  color: var(--default-color);
-}
-
-.speakers .member .social i {
+.md-note-content {
   font-size: 18px;
-  margin: 0 2px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
 }
 
-.speakers .member:hover .member-info {
-  bottom: 0;
+.md-name {
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .md-note-container {
+    flex-direction: column; /* Stacks the image and note vertically */
+  }
+
+  .md-image,
+  .md-note {
+    max-width: 100%; /* Full width for both image and note */
+    margin: 0; /* Removes extra spacing for cleaner stack */
+  }
+
+  .md-note {
+    margin-top: 1rem; /* Adds spacing between the image and the note */
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1292,64 +1288,6 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hotels Section
---------------------------------------------------------------*/
-.hotels .card {
-  background-color: var(--surface-color);
-  color: var(--default-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  position: relative;
-  border-radius: 0;
-}
-
-.hotels .card .card-img {
-  overflow: hidden;
-  margin-bottom: 15px;
-  border-radius: 0;
-}
-
-.hotels .card .card-img img {
-  transition: 0.3s ease-in-out;
-}
-
-.hotels .card h3 {
-  font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 5px;
-  padding: 0 20px;
-}
-
-.hotels .card a {
-  color: var(--heading-color);
-  transition: 0.3;
-}
-
-.hotels .card a:hover {
-  color: var(--accent-color);
-}
-
-.hotels .card .stars {
-  padding: 0 20px;
-  margin-bottom: 5px;
-}
-
-.hotels .card .stars i {
-  color: #ffc107;
-}
-
-.hotels .card p {
-  padding: 0 20px;
-  margin-bottom: 20px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-style: italic;
-  font-size: 15px;
-}
-
-.hotels .card:hover .card-img img {
-  transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
 .gallery {
@@ -1459,369 +1397,6 @@ section,
     transform: scale(1.2);
     transition: none;
   }
-}
-
-/*--------------------------------------------------------------
-# Sponsors Section
---------------------------------------------------------------*/
-.sponsors .clients-wrap {
-  border-top: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 85%);
-  border-left: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 85%);
-}
-
-.sponsors .client-logo {
-  background-color: var(--surface-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-right: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 85%);
-  border-bottom: 1px solid
-    color-mix(in srgb, var(--default-color), transparent 85%);
-  overflow: hidden;
-}
-
-.sponsors .client-logo img {
-  padding: 50px;
-  max-width: 80%;
-  transition: 0.3s;
-}
-
-@media (max-width: 640px) {
-  .sponsors .client-logo img {
-    padding: 30px;
-    max-width: 50%;
-  }
-}
-
-.sponsors .client-logo:hover img {
-  transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-# Faq Section
---------------------------------------------------------------*/
-.faq .faq-container .faq-item {
-  background-color: var(--surface-color);
-  position: relative;
-  padding: 20px;
-  margin-bottom: 15px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.faq .faq-container .faq-item h3 {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0 30px 0 0;
-  transition: 0.3s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.faq .faq-container .faq-item h3 .num {
-  color: var(--accent-color);
-  padding-right: 5px;
-}
-
-.faq .faq-container .faq-item h3:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-item .faq-content {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: 0.3s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.faq .faq-container .faq-item .faq-content p {
-  margin-bottom: 0;
-  overflow: hidden;
-}
-
-.faq .faq-container .faq-item .faq-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 16px;
-  line-height: 0;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.faq .faq-container .faq-item .faq-toggle:hover {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 97%);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 80%);
-}
-
-.faq .faq-container .faq-active h3 {
-  color: var(--accent-color);
-}
-
-.faq .faq-container .faq-active .faq-content {
-  grid-template-rows: 1fr;
-  visibility: visible;
-  opacity: 1;
-  padding-top: 10px;
-}
-
-.faq .faq-container .faq-active .faq-toggle {
-  transform: rotate(90deg);
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Buy Tickets Section
---------------------------------------------------------------*/
-.buy-tickets .pricing-item {
-  background-color: var(--surface-color);
-  box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
-  padding-bottom: 30px;
-  position: relative;
-}
-
-.buy-tickets .pricing-item h3 {
-  font-weight: 700;
-  margin-bottom: 0;
-  font-size: 24px;
-}
-
-.buy-tickets .pricing-item h4 {
-  font-size: 48px;
-  color: var(--accent-color);
-  font-weight: 400;
-  font-family: var(--heading-font);
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-.buy-tickets .pricing-item h4 sup {
-  font-size: 28px;
-}
-
-.buy-tickets .pricing-item h4 span {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-  font-size: 18px;
-}
-
-.buy-tickets .pricing-item ul {
-  padding: 20px 0;
-  list-style: none;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  text-align: left;
-  line-height: 20px;
-}
-
-.buy-tickets .pricing-item ul li {
-  padding-top: 15px;
-  display: flex;
-  align-items: center;
-}
-
-.buy-tickets .pricing-item ul i {
-  color: #059652;
-  font-size: 24px;
-  padding-right: 3px;
-}
-
-.buy-tickets .pricing-item ul .na {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-}
-
-.buy-tickets .pricing-item ul .na i {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-}
-
-.buy-tickets .pricing-item ul .na span {
-  text-decoration: line-through;
-}
-
-.buy-tickets .buy-btn {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-  display: inline-block;
-  padding: 12px 40px;
-  border-radius: 4px;
-  transition: none;
-  font-size: 16px;
-  font-weight: 500;
-  transition: 0.3s;
-  font-family: var(--heading-font);
-}
-
-.buy-tickets .buy-btn:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-.buy-tickets .featured {
-  background: var(--accent-color);
-}
-
-.buy-tickets .featured h3,
-.buy-tickets .featured h4,
-.buy-tickets .featured h4 span,
-.buy-tickets .featured ul,
-.buy-tickets .featured ul .na,
-.buy-tickets .featured ul i,
-.buy-tickets .featured ul .na i {
-  color: var(--contrast-color);
-}
-
-.buy-tickets .featured .buy-btn {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  border-color: var(--contrast-color);
-}
-
-.buy-tickets .featured .buy-btn:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
-  color: var(--contrast-color);
-}
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact .info-item {
-  background-color: var(--surface-color);
-  padding: 20px 0 30px 0;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-.contact .info-item i {
-  font-size: 20px;
-  color: var(--accent-color);
-  width: 56px;
-  height: 56px;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  transition: all 0.3s ease-in-out;
-  border-radius: 50%;
-  border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
-}
-
-.contact .info-item h3 {
-  font-size: 20px;
-  font-size: 18px;
-  font-weight: 700;
-  margin: 10px 0;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.contact .php-email-form {
-  background-color: var(--surface-color);
-  height: 100%;
-  padding: 30px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width: 575px) {
-  .contact .php-email-form {
-    padding: 20px;
-  }
-}
-
-.contact .php-email-form input[type="text"],
-.contact .php-email-form input[type="email"],
-.contact .php-email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: var(--surface-color);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .php-email-form input[type="text"]:focus,
-.contact .php-email-form input[type="email"]:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .php-email-form input[type="text"]::placeholder,
-.contact .php-email-form input[type="email"]::placeholder,
-.contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .php-email-form button[type="submit"] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-/*--------------------------------------------------------------
-# Events Section
---------------------------------------------------------------*/
-.events .details h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.events .details .social {
-  margin-bottom: 15px;
-}
-
-.events .details .social a {
-  background: color-mix(in srgb, var(--default-color), transparent 92%);
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  line-height: 1;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.events .details .social a:hover {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.events .details .social a i {
-  font-size: 16px;
-  line-height: 0;
-}
-
-.events .details p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  font-size: 15px;
-  margin-bottom: 10px;
 }
 
 /*  Carousel section css */
@@ -2036,4 +1611,88 @@ section,
   font-size: 24px;
   color: #ffffff;
   text-align: center;
+}
+
+/* Team Member Section */
+
+.team-section {
+  text-align: center;
+}
+
+.team-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  background-color: #101215d9;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: calc(25% - 20px);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team-member img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #fff;
+}
+
+.team-member h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #b0b0b0;
+}
+
+@media (max-width: 1200px) {
+  .team-member {
+    width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .team-member {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    width: calc(50% - 20px);
+  }
+
+  .team-member img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    width: 100%;
+  }
+
+  .team-member img {
+    width: 80px;
+    height: 80px;
+  }
 }

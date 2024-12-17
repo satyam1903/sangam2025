@@ -38156,7 +38156,6 @@
 
 function scoreUpdater(score) {
   const savedUserInfo = JSON.parse(localStorage.getItem("userInfo"));
-  console.log("saved fatsr4", savedUserInfo);
   fetch("https://leaderboard-api-test.vercel.app/api/index", {
     method: "POST",
     headers: {
@@ -38174,9 +38173,6 @@ function scoreUpdater(score) {
         throw new Error("Network response was not ok " + response.statusText);
       }
       return response.json();
-    })
-    .then((data) => {
-      console.log("Success:", data);
     })
     .catch((error) => {
       console.error("There was a problem with the fetch operation:", error);
