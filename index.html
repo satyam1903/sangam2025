@@ -1485,22 +1485,31 @@
                 height,
                 totalWidth,
                 margin = 20,
-                currIndex = 1, // Set to 1 to start from the first item for each carousel
+                currIndex = 1,
                 interval,
-                intervalTime = 4000;
+                intervalTime = 4000,
+                isMobile = window.innerWidth <= 768; // Mobile breakpoint
 
               function init() {
                 resize();
-                move(currIndex); // Start from the first item
+                move(currIndex);
                 bindEvents();
                 timer();
               }
 
               function resize() {
-                (width = Math.max(window.innerWidth * 0.5, 275)),
-                  (height = window.innerHeight * 0.5),
-                  (totalWidth = width * items.length);
+                isMobile = window.innerWidth <= 768;
+                if (isMobile) {
+                  // Full-width images for mobile
+                  width = window.innerWidth * 0.9; // Take 90% of the screen width
+                  height = width * 0.5625; // Maintain 16:9 aspect ratio
+                } else {
+                  // Desktop size
+                  width = Math.max(window.innerWidth * 0.5, 275);
+                  height = window.innerHeight * 0.5;
+                }
 
+                totalWidth = width * items.length;
                 slider.style.width = totalWidth + "px";
 
                 items.forEach((item) => {
@@ -1550,9 +1559,40 @@
               }
 
               function bindEvents() {
-                window.onresize = resize;
+                window.addEventListener("resize", debounce(resize, 300));
                 if (prevBtn) prevBtn.addEventListener("click", prev);
                 if (nextBtn) nextBtn.addEventListener("click", next);
+
+                // Add swipe events for mobile
+                if (isMobile) {
+                  let touchStartX = 0;
+                  let touchEndX = 0;
+
+                  slider.addEventListener("touchstart", (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                  });
+
+                  slider.addEventListener("touchend", (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipeGesture();
+                  });
+
+                  function handleSwipeGesture() {
+                    if (touchEndX < touchStartX - 50) {
+                      next();
+                    } else if (touchEndX > touchStartX + 50) {
+                      prev();
+                    }
+                  }
+                }
+              }
+
+              function debounce(func, wait) {
+                let timeout;
+                return function () {
+                  clearTimeout(timeout);
+                  timeout = setTimeout(() => func(), wait);
+                };
               }
 
               init();
@@ -1774,18 +1814,6 @@
         </div>
         <!-- End Section Title -->
         <style>
-          * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-          }
-
-          body {
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-          }
-
           .team-section {
             text-align: center;
           }

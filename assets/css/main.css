@@ -1923,6 +1923,12 @@ section,
   transform-origin: 100%;
 }
 
+@media (max-width: 768px) {
+  .carousel__body {
+    padding: 70px 0 70px 0;
+  }
+}
+
 /* count down section */
 
 #container {
