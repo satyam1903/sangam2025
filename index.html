@@ -90,16 +90,21 @@
           data-aos="fade-in"
           class="mobile-theme-photo"
         />
-        <div
-          class="container"
-          style="
+        <style>
+          .countdown-conatiner {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             margin-top: 20%;
-          "
-        >
+          }
+          @media (max-width: 768px) {
+            .countdown-conatiner {
+              margin-top: 70%;
+            }
+          }
+        </style>
+        <div class="countdown-conatiner">
           <div id="countdown" class="countdown" style="margin-top: 5%">
             <div class="countdown__container">
               <div class="countdown__item days">
