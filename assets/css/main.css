@@ -781,7 +781,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
   position: relative;
 }
 
@@ -797,7 +797,7 @@ section,
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
+  width: 60px;
   height: 3px;
   background: var(--accent-color);
   left: 0;
