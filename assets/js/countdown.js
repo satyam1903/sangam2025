@@ -28,6 +28,8 @@ function updateTimer() {
   if (time.time <= 0) {
     clearInterval(countdownTicRef);
     document.getElementById("countdown").style.display = "none";
+    handleResize();
+    window.addEventListener("resize", handleResize);
     return;
   }
 
@@ -35,6 +37,15 @@ function updateTimer() {
   document.getElementById("hours").textContent = getZero(time.hours);
   document.getElementById("minutes").textContent = getZero(time.minutes);
   document.getElementById("seconds").textContent = getZero(time.seconds);
+}
+
+function handleResize() {
+  const countdownElement = document.getElementById("hero");
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    countdownElement.style.minHeight = "60vh";
+  } else {
+    countdownElement.style.minHeight = "100vh";
+  }
 }
 
 function startCountdown() {

@@ -886,7 +886,7 @@ section,
     inset: 0;
     display: block;
     width: 100%;
-    height: 50%;
+    height: 50vh;
     z-index: 1;
     margin-top: 50px;
   }
