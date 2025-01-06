@@ -1833,6 +1833,67 @@
             showCarousel("carousel1");
           };
         </script>
+        <style>
+          .section-video {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-bottom: 60px;
+          }
+
+          .section-video h2 {
+            font-weight: 700;
+          }
+
+          @media (max-width: 768px) {
+            .section-video {
+              margin-top: 0px;
+              margin-bottom: 60px;
+            }
+          }
+        </style>
+
+        <div class="section-video" data-aos="fade-up">
+          <h2 style="font: bold">Sangam 2024 Flashback<br /></h2>
+        </div>
+
+        <style>
+          .throwback-video {
+            display: flex;
+            justify-content: center;
+            height: 60vh;
+          }
+
+          .throwback-video-style {
+            width: 60%;
+            height: 100%;
+          }
+
+          @media (max-width: 768px) {
+            .throwback-video {
+              display: flex;
+              justify-content: center;
+              height: 40vh;
+            }
+
+            .throwback-video-style {
+              width: 90%;
+              height: 100%;
+            }
+          }
+        </style>
+
+        <div class="throwback-video">
+          <iframe
+            class="throwback-video-style"
+            src="https://www.youtube.com/embed/6Et9YAxEdqE?si=3gbulUJzC398ac0Z"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
       </section>
       <!-- /Gallery Section -->
 
@@ -2692,6 +2753,81 @@
             </li>
           </ul>
         </div>
+
+        <div class="container section-cricket" data-aos="fade-up">
+          <h2 style="font: bold">WINPL Fixture<br /></h2>
+        </div>
+
+        <style>
+          .cricket-fixture {
+            display: flex;
+            justify-content: center;
+            height: 70vh;
+            width: 100%;
+            margin-bottom: 30px;
+          }
+
+          .cricket-fixture-img {
+            width: 70%;
+          }
+
+          @media (max-width: 768px) {
+            .cricket-fixture {
+              display: flex;
+              justify-content: center;
+              height: 40vh;
+            }
+
+            .cricket-fixture-img {
+              width: 95%;
+            }
+          }
+        </style>
+
+        <div class="cricket-fixture">
+          <img
+            src="assets/img/fixtures.jpeg"
+            alt=""
+            class="cricket-fixture-img"
+          />
+        </div>
+
+        <div class="container section-cricket" data-aos="fade-up">
+          <h2 style="font: bold">WINPL Awards<br /></h2>
+        </div>
+
+        <style>
+          .cricket-award {
+            display: flex;
+            justify-content: center;
+            height: 70vh;
+            width: 100%;
+          }
+
+          .cricket-award-img {
+            width: 30%;
+          }
+
+          @media (max-width: 768px) {
+            .cricket-award {
+              display: flex;
+              justify-content: center;
+              height: 70vh;
+            }
+
+            .cricket-award-img {
+              width: 95%;
+            }
+          }
+        </style>
+
+        <div class="cricket-award">
+          <img
+            src="assets/img/winipl-awards.jpeg"
+            alt=""
+            class="cricket-award-img"
+          />
+        </div>
       </div>
       <style>
         .teams-container {
@@ -2706,6 +2842,7 @@
         .section-cricket {
           text-align: center;
           padding-bottom: 40px;
+          margin-top: 20px;
         }
 
         .section-cricket h2 {
@@ -2748,6 +2885,10 @@
         @media (max-width: 768px) {
           .team {
             width: calc(50% - 20px);
+          }
+
+          .section-cricket {
+            margin-top: 15px;
           }
         }
 
