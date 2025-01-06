@@ -1175,6 +1175,16 @@ section,
   margin-bottom: 0;
 }
 
+@media (max-width: 768px) {
+  .schedule .schedule-item h4 {
+    font-size: 14px;
+  }
+
+  .schedule-header h3 {
+    font-size: 20px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Venue Section
 --------------------------------------------------------------*/
