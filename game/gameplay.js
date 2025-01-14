@@ -35290,7 +35290,41 @@
                       for (;;)
                         switch ((e.prev = e.next)) {
                           case 0:
-                            scoreUpdater(t);
+                            const savedUserInfo = JSON.parse(
+                              localStorage.getItem("userInfo")
+                            );
+                            fetch(
+                              "https://leaderboard-api-test.vercel.app/api/index",
+                              {
+                                method: "POST",
+                                headers: {
+                                  Accept: "application/json",
+                                  "Content-Type": "application/json",
+                                },
+                                body: JSON.stringify({
+                                  name: extractNameFromEmail(
+                                    savedUserInfo.email
+                                  ),
+                                  email: savedUserInfo.email,
+                                  score: t,
+                                }),
+                              }
+                            )
+                              .then((response) => {
+                                if (!response.ok) {
+                                  throw new Error(
+                                    "Network response was not ok " +
+                                      response.statusText
+                                  );
+                                }
+                                return response.json();
+                              })
+                              .catch((error) => {
+                                console.error(
+                                  "There was a problem with the fetch operation:",
+                                  error
+                                );
+                              });
                             return (
                               (Mf.SCORE = t),
                               (e.next = 4),
@@ -38153,31 +38187,6 @@
       });
   },
 ]);
-
-function scoreUpdater(score) {
-  const savedUserInfo = JSON.parse(localStorage.getItem("userInfo"));
-  fetch("https://leaderboard-api-test.vercel.app/api/index", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: extractNameFromEmail(savedUserInfo.email),
-      email: savedUserInfo.email,
-      score: score,
-    }),
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("Network response was not ok " + response.statusText);
-      }
-      return response.json();
-    })
-    .catch((error) => {
-      console.error("There was a problem with the fetch operation:", error);
-    });
-}
 
 function extractNameFromEmail(email) {
   const [firstName, lastName] = email.split("@")[0].split(".");
