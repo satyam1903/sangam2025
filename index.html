@@ -2500,7 +2500,7 @@
           <style>
             .game-section {
               display: flex;
-              flex-direction: row;
+              justify-content: center;
             }
 
             #helix-game {
@@ -2521,14 +2521,6 @@
             }
           </style>
           <div class="game-section">
-            <iframe
-              id="helix-game"
-              src="./game/index.html"
-              frameborder="0"
-              width="450"
-              height="750"
-              allowfullscreen
-            ></iframe>
             <!-- style for leader board design -->
             <div id="leaderboard-modal">
               <style>
@@ -2537,7 +2529,6 @@
                   width: 500px;
                   margin: 20px auto;
                   padding: 20px;
-                  margin-left: 20%;
                   background: linear-gradient(135deg, #0a0a0a, #1e1e1e);
                   color: #fff;
                   border-radius: 15px;
@@ -3167,7 +3158,6 @@
     <!-- particle js file  -->
     <script src="assets/js/particle.js"></script>
     <script type="module" src="assets/js/countdown.js"></script>
-    <script src="game/gameplay.js"></script>
     <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
   </body>
 </html>
